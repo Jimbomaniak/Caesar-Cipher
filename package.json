@@ -2,7 +2,7 @@
   "name": "chesar-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Jimbomaniak/Caesar-Cipher/",
+  "homepage": "https://jimbomaniak.github.io/Caesar-Cipher/",
   "dependencies": {
     "chart.js": "^2.7.2",
     "gh-pages": "^1.1.0",
