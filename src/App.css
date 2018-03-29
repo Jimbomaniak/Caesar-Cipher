@@ -1,0 +1,11 @@
+@media (min-width: 700px) {
+  .app {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+    grid-template-rows: 0.1fr 0.1fr 0.5fr 0.5fr 0.1fr;
+    grid-gap: 0px 10px;
+    grid-template-areas: "header header header header header" "counter counter counter counter counter" ". input result prediction ." ". chart chart chart ." "footer footer footer footer footer"; } }
+.user-input, .result, .prediction {
+  margin: 10px; }
+
+/*# sourceMappingURL=App.css.map */
