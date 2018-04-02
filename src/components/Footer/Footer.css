@@ -1,5 +1,9 @@
 .footer {
   grid-area: footer;
-  text-align: center; }
+  text-align: center;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  font-size: 12px; }
 
 /*# sourceMappingURL=Footer.css.map */

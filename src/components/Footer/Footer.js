@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
   return <div className='footer'>
-    made by Oleg
+    Made by Oleg Kupriianov
   </div>
 };
 

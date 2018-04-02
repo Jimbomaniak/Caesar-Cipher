@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,OAAO;EACL,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,MAAM",
+"mappings": "AAAA,OAAO;EACL,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,MAAM;EAClB,OAAO,EAAE,GAAG;EACZ,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,KAAK;EACZ,SAAS,EAAE,IAAI",
 "sources": ["Footer.sass"],
 "names": [],
 "file": "Footer.css"

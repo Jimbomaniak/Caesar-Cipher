@@ -3,9 +3,9 @@ import './Counter.css'
 
 const Counter = (props) => {
     return <div className='counter'>
-      <span className="minus" onClick={props.decrease}>-</span>
+      <div className="minus" onClick={props.decrease}><i className="fas fa-minus"></i></div>
       <div className='number'>{props.num}</div>
-      <span className="plus" onClick={props.increase}>+</span>
+      <div className="plus" onClick={props.increase}><i className="fas fa-plus"></i></div>
     </div>
 };
 

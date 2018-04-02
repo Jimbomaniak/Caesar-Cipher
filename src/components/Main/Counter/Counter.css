@@ -4,10 +4,19 @@
   background-color: #00AA8D;
   color: white; }
   .counter .plus, .counter .minus {
+    display: inline-block;
     font-size: 20px;
-    font-weight: bold;
     cursor: pointer;
-    margin: 5px; }
+    margin: 8px;
+    width: 30px;
+    border-radius: 2px;
+    box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 500ms, box-shadow 500ms;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #2ac79b; }
+  .counter .plus:hover, .counter .minus:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 14px 4px rgba(0, 0, 0, 0.2); }
   .counter .number {
     display: inline;
     font-size: 25px; }
