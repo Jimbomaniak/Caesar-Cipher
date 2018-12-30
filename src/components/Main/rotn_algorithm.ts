@@ -1,13 +1,18 @@
-export function rotn(str, key) {
+interface Encrypted {
+  text: string;
+  shift: number;
+}
+
+
+export function rotn(str: string, key: number) {
   return str.toUpperCase().replace(/[A-Z]/g, c => String.fromCharCode((c.charCodeAt(0)-65+key)%26+65))
 }
 
 let entropies;
 
-export function doBreak(msg) {
-  let text = msg;
+export function doBreak(text: string): Encrypted {
   entropies = getAllEntropies(text);
-  entropies.sort(function (x, y) {
+  entropies.sort(function (x: number[], y: number[]): number {
     // Compare by lowest entropy, break ties by lowest shift
     if (x[1] !== y[1])
       return x[1] - y[1];
@@ -16,11 +21,11 @@ export function doBreak(msg) {
   });
 
   // Decrypt using lowest entropy shift
-  let bestShift = entropies[0][0];
+  const bestShift = entropies[0][0];
   // let encrypted = decrypt(text, bestShift);
   // console.log(encrypted);
   // console.log(bestShift.toString());
-  return {encryptedText: decrypt(text, bestShift), shift:bestShift.toString()}
+  return {text: decrypt(text, bestShift), shift: bestShift}
 }
 
 
@@ -28,7 +33,7 @@ export function doBreak(msg) {
 
 // Returns the entropies when the given string is decrypted with all 26 possible shifts,
 // where the result is an array of pairs (int shift, float enptroy) - e.g. [[0, 2.01], [1, 4.95], ..., [25, 3.73]].
-function getAllEntropies(str) {
+function getAllEntropies(str: string): number[][] {
   let result = [];
   for (let i = 0; i < 26; i++)
     result.push([i, getEntropy(decrypt(str, i))]);
@@ -43,7 +48,7 @@ const ENGLISH_FREQS = [
 ];
 
 // Returns the cross-entropy of the given string with respect to the English unigram frequencies, which is a positive floating-point number.
-function getEntropy(str) {
+function getEntropy(str: string) : number {
   let sum = 0;
   let ignored = 0;
   for (let i = 0; i < str.length; i++) {
@@ -58,7 +63,7 @@ function getEntropy(str) {
 
 // Decrypts the given string with the given key using the Caesar shift cipher.
 // The key is an integer representing the number of letters to step back by - e.g. decrypt("EB", 2) = "CZ".
-function decrypt(str, key) {
+function decrypt(str: string, key: number) : string {
   let result = "";
   for (let i = 0; i < str.length; i++) {
     let c = str.charCodeAt(i);
@@ -71,7 +76,7 @@ function decrypt(str, key) {
 
 
 
-function mod(x, y) {
+function mod(x: number, y: number) : number {
   return (x % y + y) % y;
 }
 

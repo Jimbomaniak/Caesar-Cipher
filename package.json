@@ -4,12 +4,13 @@
   "private": true,
   "homepage": "https://jimbomaniak.github.io/Caesar-Cipher/",
   "dependencies": {
-    "chart.js": "^2.7.2",
-    "gh-pages": "^1.1.0",
-    "react": "^16.2.0",
+    "chart.js": "^2.7.3",
+    "gh-pages": "^2.0.1",
+    "react": "16.7.0",
     "react-chartjs-2": "^2.7.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-dom": "16.7.0",
+    "react-scripts": "2.1.2",
+    "typescript": "^3.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -18,5 +19,14 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/react": "^16.7.18"
   }
 }

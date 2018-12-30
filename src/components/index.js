@@ -4,7 +4,7 @@ import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Result from './Main/Result/Result'
 import Prediction from './Main/Prediction/Prediction'
-import {rotn, doBreak, getCharFreq} from './Main/rotn_algorithm'
+import {rotn, doBreak} from './Main/rotn_algorithm'
 
 
 export {
@@ -16,5 +16,4 @@ export {
   Footer,
   rotn,
   doBreak,
-  getCharFreq
 }
